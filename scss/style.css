@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "RobotoLight";
+  src: url("../fonts/RobotoLight/RobotoLight.eot");
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot");
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"), url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+* {
+  padding: 0;
+  margin: 0; }
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+  font-family: "RobotoRegular";
+  background-color: #EEEEEE; }
+
+header {
+  position: relative;
+  width: 100%;
+  height: 7%;
+  min-height: 1.8em;
+  background-color: #2962FF;
+  -webkit-box-shadow: 0 -4px 15px 6px #000;
+  -moz-box-shadow: 0 -4px 15px 6px #000;
+  box-shadow: 0 -4px 15px 6px #000; }
+  header .menu-button {
+    position: absolute;
+    width: 24px;
+    margin: auto 6px;
+    top: 0;
+    bottom: 0; }
+  header div {
+    height: 1.4em;
+    position: absolute;
+    margin: auto 45px;
+    top: 0;
+    bottom: 0;
+    font-family: "RobotoBold";
+    font-size: 1.4em; }
+
+main {
+  position: relative;
+  margin: 0 auto;
+  width: 94%;
+  height: 87%;
+  top: 3%;
+  bottom: 3%; }
+  main section {
+    position: relative;
+    overflow: hidden;
+    height: 30%;
+    -webkit-box-shadow: 0 0 10px -2px #000;
+    -moz-box-shadow: 0 0 10px -2px #000;
+    box-shadow: 0 0 10px -2px #000;
+    background-color: #fff; }
+    main section div {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      background-color: #82B1FF; }
+      main section div p {
+        text-align: center; }
+  main article {
+    position: relative;
+    height: 67%;
+    top: 3%;
+    -webkit-box-shadow: 0 0 10px -2px #000;
+    -moz-box-shadow: 0 0 10px -2px #000;
+    box-shadow: 0 0 10px -2px #000;
+    background-color: #fff; }
+    main article img {
+      height: 6em;
+      float: left; }
+    main article h1 {
+      font-family: "RobotoBold";
+      font-size: 2em; }
+    main article p {
+      clear: left; }
+
+#question-number {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 7%;
+  right: 6%;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 6px 20px -1px #000;
+  -moz-box-shadow: 0 6px 20px -1px #000;
+  box-shadow: 0 6px 20px -1px #000;
+  background-color: #FF4C00; }
+  #question-number img {
+    width: 24px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
+#greyScreen {
+  position: fixed;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5; }
+
+aside {
+  z-index: 1;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: -80%;
+  width: 75%;
+  height: 100%;
+  max-width: 300px;
+  min-width: 180px;
+  background-color: #fff;
+  -webkit-box-shadow: -4px 0 30px 5px #000;
+  -moz-box-shadow: -4px 0 30px 5px #000;
+  box-shadow: -4px 0 30px 5px #000; }
+  aside .userInfo {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    min-height: 100px;
+    max-height: 160px;
+    background-color: #82B1FF; }
+    aside .userInfo .photo {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 10%;
+      left: 5%;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      background-color: #9E9E9E; }
+    aside .userInfo .name {
+      position: absolute;
+      width: 100%;
+      bottom: 0.5em;
+      left: 0.5em;
+      font-family: "RobotoMedium"; }
+
+/*# sourceMappingURL=style.css.map */

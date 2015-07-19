@@ -1,0 +1,27 @@
+@mixin border-radius ($radius) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow ($x, $y, $radius, $extension, $color) {
+	-webkit-box-shadow: $x $y $radius $extension $color;
+    -moz-box-shadow:  $x $y $radius $extension $color;
+    box-shadow:  $x $y $radius $extension $color;
+}
+
+@mixin vertical-centered ($MarginBySides) {
+	position: absolute;
+	margin: auto $MarginBySides;
+	top: 0;
+	bottom: 0;
+}
+
+@mixin centered {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
