@@ -53,8 +53,50 @@
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3); } }
 .bounceOut {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
   -webkit-animation-name: bounceOut;
   animation-name: bounceOut; }
+
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+    transform: translate3d(2000px, 0, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig; }
+
+@-webkit-keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); } }
+@keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0); } }
+.fadeOutLeftBig {
+  -webkit-animation-name: fadeOutLeftBig;
+  animation-name: fadeOutLeftBig; }
 
 * {
   padding: 0;
@@ -98,78 +140,56 @@ main {
   top: 3%;
   bottom: 3%; }
   main section {
-    position: relative;
-    overflow: hidden;
-    height: 30%;
-    -webkit-box-shadow: 0 0 10px -2px #000;
-    -moz-box-shadow: 0 0 10px -2px #000;
-    box-shadow: 0 0 10px -2px #000;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-color: #fff; }
+    position: relative; }
     main section img {
-      position: absolute;
+      display: block;
+      width: 100%; }
+    main section .under-main-img {
+      position: inherit;
       width: 100%;
-      top: 0; }
-    main section .on-main-page {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      background-color: #82B1FF; }
-      main section .on-main-page p {
-        text-align: center; }
-    main section .question {
-      padding: 0.4em;
-      font-size: 1.2em;
-      font-family: "RobotoMedium"; }
-  main article {
-    position: relative;
-    height: 67%;
-    top: 3%;
-    -webkit-box-shadow: 0 0 10px -2px #000;
-    -moz-box-shadow: 0 0 10px -2px #000;
-    box-shadow: 0 0 10px -2px #000;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    background-color: #fff; }
-    main article img {
-      height: 6em;
-      float: left; }
-    main article h1 {
-      font-family: "RobotoBold";
-      font-size: 2em; }
-    main article p {
-      clear: left; }
+      background-color: #8A8F99; }
+      main section .under-main-img p {
+        text-align: center;
+        padding-top: 45px;
+        padding-bottom: 10px;
+        font-size: 1em; }
+      main section .under-main-img .personal-page-button-on-main {
+        padding-bottom: 0.5em;
+        padding-left: 0.7em;
+        color: #0E18CF;
+        font-family: "RobotoMedium"; }
+
+.card {
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px 0px #000;
+  -moz-box-shadow: 0 0 10px 0px #000;
+  box-shadow: 0 0 10px 0px #000;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
 
 .action-button {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  bottom: 7%;
-  right: 6%;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  -webkit-box-shadow: 0 6px 20px -1px #000;
-  -moz-box-shadow: 0 6px 20px -1px #000;
-  box-shadow: 0 6px 20px -1px #000;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  top: -31px;
+  left: 10%;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 7px 25px -1px #000;
+  -moz-box-shadow: 0 7px 25px -1px #000;
+  box-shadow: 0 7px 25px -1px #000;
   background-color: #FF4C00; }
   .action-button img {
-    width: 24px;
+    width: 35px;
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0; }
-
-.tap-action-button {
-  -webkit-box-shadow: 0 4px 15px -1px #000;
-  -moz-box-shadow: 0 4px 15px -1px #000;
-  box-shadow: 0 4px 15px -1px #000;
-  background-color: #FF6F2B; }
 
 #greyScreen {
   position: fixed;
@@ -215,6 +235,14 @@ aside {
       -webkit-border-radius: 25px;
       border-radius: 25px;
       background-color: #9E9E9E; }
+      aside .userInfo .photo img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 50px; }
     aside .userInfo .name {
       position: absolute;
       width: 100%;
@@ -239,5 +267,12 @@ aside {
     width: 100%;
     height: 100%;
     background-color: #ADADAD; }
+
+.swipe-for-aside {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 5%;
+  height: 93%; }
 
 /*# sourceMappingURL=style.css.map */

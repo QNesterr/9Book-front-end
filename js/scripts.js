@@ -4,16 +4,20 @@ var AnimationIsGoing = false;
 // функция, выдвигающая/задвигающая боковое меню
 function slideMenu(distance) {
 	AnimationIsGoing = true;
-	setTimeout(function() {AnimationIsGoing = false;}, 800);
+	setTimeout(function() {AnimationIsGoing = false;}, 100);
     $('aside').animate({
         left: distance
-    }, 800, 'easeInOutCubic');
-    $('#greyScreen').fadeToggle(500);
+    }, 100, 'easeInOutCubic');
+    $('#greyScreen').fadeToggle(100);
 }
 
 $(document).ready(function() {
 // работа с боковым меню
     $('.menu-button').click(function() {
+        if (AnimationIsGoing == false) {
+            slideMenu('0px');
+        }});
+    $('.swipe-for-aside').on('swiperight', function() {
         if (AnimationIsGoing == false) {
             slideMenu('0px');
         }});
@@ -29,8 +33,14 @@ $(document).ready(function() {
         if (AnimationIsGoing == false) {
             slideMenu('-100%');
         }});
-// анимация круглой кнопки по нажатию
-    $('.action-button').click(function() {
-        $(this).addClass('animated bounceOut');
-    });
+// анимация после нажатия круглой кнопки
+        $('.action-button').click(function() {
+            $(this).addClass('animated bounceOut');
+            setTimeout(function() {
+                $('section').addClass('animated fadeOutLeftBig');
+            }, 700);
+            });
+    // setTimeout(function() {
+    //     $('section').addClass('animated fadeOutLeftBig');
+    // },500);
 });
