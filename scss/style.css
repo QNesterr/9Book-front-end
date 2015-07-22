@@ -22,6 +22,12 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -151,8 +157,7 @@ main {
       main section .under-main-img p {
         text-align: center;
         padding-top: 45px;
-        padding-bottom: 10px;
-        font-size: 1em; }
+        padding-bottom: 10px; }
       main section .under-main-img .personal-page-button-on-main {
         padding-bottom: 0.5em;
         padding-left: 0.7em;
@@ -204,6 +209,7 @@ aside {
   z-index: 1;
   opacity: 1;
   position: fixed;
+  overflow: auto;
   top: 0;
   left: -80%;
   width: 75%;
@@ -220,7 +226,7 @@ aside {
     height: 25%;
     min-height: 100px;
     max-height: 160px;
-    background-color: #82B1FF; }
+    background-color: #00BBFF; }
     aside .userInfo .close-menu-icon {
       position: absolute;
       top: 7%;
@@ -245,28 +251,53 @@ aside {
         width: 50px; }
     aside .userInfo .name {
       position: absolute;
-      width: 100%;
+      width: 95%;
       bottom: 5%;
       left: 5%;
-      font-family: "RobotoBold"; }
-  aside nav ul {
-    padding-bottom: 1.2em; }
-    aside nav ul li {
-      list-style: none;
-      position: relative;
-      left: 5%;
-      padding-top: 1.2em;
-      font-family: "RobotoMedium"; }
-      aside nav ul li img {
+      font-family: "RobotoMedium";
+      font-size: 1.2em; }
+  aside nav {
+    height: 75%; }
+    aside nav ul {
+      padding-bottom: 1.2em;
+      width: 95%; }
+      aside nav ul li {
+        list-style: none;
         position: relative;
-        bottom: -.3em;
-        padding-right: 1.5em; }
-  aside .aside-footer {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ADADAD; }
+        left: 5%;
+        padding-top: .6em; }
+        aside nav ul li img {
+          position: relative;
+          bottom: -.3em;
+          padding-right: 1.3em; }
+
+.userinfo-nav-WRAP {
+  min-height: 100%;
+  margin-bottom: -1.7em; }
+
+.userinfo-nav-WRAP:after {
+  content: "";
+  display: block;
+  height: 1.7em; }
+
+.page-on {
+  position: absolute;
+  height: 1.7em;
+  width: 100%;
+  font-family: "OpenSansRegular"; }
+  .page-on div {
+    position: absolute;
+    left: 5%; }
+    .page-on div img {
+      width: 1.2em;
+      position: absolute;
+      margin: auto 0;
+      top: 0;
+      bottom: 0;
+      right: -1.3em; }
+    .page-on div a {
+      text-decoration: none;
+      color: #000; }
 
 .swipe-for-aside {
   position: fixed;

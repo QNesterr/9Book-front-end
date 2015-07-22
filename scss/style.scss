@@ -61,10 +61,6 @@ main {
 				text-align: center;
 				padding-top: 45px;
 				padding-bottom: 10px;
-				font: {
-					//family: "RobotoMedium";
-					size: 1em;
-				}
 			}
 			.personal-page-button-on-main {
 				padding-bottom: 0.5em;
@@ -73,8 +69,6 @@ main {
 				font-family: "RobotoMedium";
 			}
 		}
-	}
-	article {
 	}
 }
 
@@ -114,6 +108,7 @@ aside {
 	z-index: 1;
 	opacity: 1;
 	position: fixed;
+	overflow: auto;
 	top: 0;
 	left: -80%;
 	width: 75%;
@@ -128,7 +123,7 @@ aside {
 		height: 25%;
 		min-height: 100px;
 		max-height: 160px;
-		background-color: #82B1FF;
+		background-color: #00BBFF;
 		.close-menu-icon {
 			position: absolute;
 			top: 7%;
@@ -149,33 +144,62 @@ aside {
 		}
 		.name {
 			position: absolute;
-			width: 100%;
+			width: 95%;
 			bottom: 5%;
 			left: 5%;
-			font-family: "RobotoBold";
+			font: {
+				family: "RobotoMedium";
+				size: 1.2em
+			}
 		}
 	}
-	nav ul {
+	nav {
+		height: 75%;
+		ul {
 			padding-bottom: 1.2em;
+			width: 95%;
 			li {
 				list-style: none;
 				position: relative;
 				left: 5%;
-				padding-top: 1.2em;
-				font-family: "RobotoMedium";
+				padding-top: .6em;
 				img {
 					position: relative;
 					bottom: -.3em;
-					padding-right: 1.5em;
+					padding-right: 1.3em;
 				}
 			}
 		}
-	.aside-footer {
-		position: relative;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #ADADAD;
+	}
+}
+.userinfo-nav-WRAP {
+	min-height: 100%;
+	margin-bottom: -1.7em;
+}
+
+.userinfo-nav-WRAP:after {
+	content: "";
+	display: block;
+	height: 1.7em;
+}
+
+.page-on {
+	position: absolute;
+	height: 1.7em;
+	width: 100%;
+	font-family: "OpenSansRegular";
+	div {
+		position: absolute;
+		left: 5%;
+		img {
+			width: 1.2em;
+			@include vertical-centered(0);
+			right: -1.3em;
+		}
+		a {
+			text-decoration: none;
+			color: #000;
+		}
 	}
 }
 .swipe-for-aside {
