@@ -3,32 +3,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>9Books</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="../js/jquery.mobile.custom.min.js"></script>
-	<script src="../js/scripts.js"></script>
 	<link rel="stylesheet" type="text/css" href="../scss/style.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
+<div class="under-header"></div>
 <header>
 	<img class="menu-button" src="../icons/ic_menu_black_24px.svg">
 	<div>9books</div>
 </header>
 <main>
 	<section class="card">
-		<img src="../images/monro.jpg">
-		<div class="under-main-img">
-		<div class="action-button">
-		<img src="../icons/ic_question_answer_black_24px.svg">
+	<div class="question">
+		<p>Зачем же здесь? и в этот час?
+		И Софья!.. Здравствуй, Софья, что ты
+		так рано поднялась! а? для какой заботы?
+		И как вас бог не в пору вместе свёл?</p>
+		<div class="back-on-question-card flat-button">НАЗАД</div>
+		<div class="start-again-on-question-card flat-button">СНАЧАЛА</div>
 		</div>
-		<p>Задумались, какую книгу прочесть?<br>
-		Мы Вам подскажем!</p>
-		<div class="personal-page-button-on-main">ЛИЧНЫЙ КАБИНЕТ</div>
+	<hr>
+	<div class="answer">
+		<form action="">
+			<input type="radio" id="answer1" name="question">
+			<label for="answer1"><span></span>Он только что теперь вошёл.</label><br>
+			<input type="radio" id="answer2" name="question">
+			<label for="answer2"><span></span>Сейчас с прогулки.</label><br>
+			<input type="radio" id="answer3" name="question">
+			<label for="answer3"><span></span>...</label>
+		</form>
+		<div class="raised-button next-answer">ДАЛЕЕ</div>
+	</div>
 	</section>
 </main>
 <aside>
-	<div class="userinfo-nav-WRAP">
+	<div class="WRAP-content-in-aside">
 		<div class="userInfo">
 			<img class="close-menu-icon" src="../icons/ic_close_black_24px.svg">
 			<div class="photo"><img src="../icons/ic_account_circle_black_24px.svg"></div>
@@ -48,11 +57,17 @@
 		</nav>
 	</div>
 	<div class="page-on">
-		<a href="http://page-on.com/">Page-ON web-studio</a>
-		<img src="../icons/ic_launch_black_24px.svg">
+		<div>
+			<a href="http://page-on.com/">Page-ON web-studio
+			<img src="../icons/ic_launch_black_24px.svg"></a>
+		</div>
 	</div>
 </aside>
 <div class="swipe-for-aside"></div>
 <div id="greyScreen"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="../js/jquery.mobile.custom.min.js"></script>
+<script src="../js/scripts.js"></script>
 </body>
 </html>

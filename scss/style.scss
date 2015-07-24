@@ -16,12 +16,22 @@ html, body {
 	background-color: #EEEEEE;
 }
 
-header {
+.under-header {
 	position: relative;
+	top: 0;
 	width: 100%;
 	height: 7%;
 	min-height: 1.8em;
-	background-color: #2962FF;
+}
+
+header {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 7%;
+	min-height: 1.8em;
+	background-color: #0C57FF;
 	@include box-shadow(0, -4px, 15px, 6px, #000);
 	.menu-button {
 		position: absolute;
@@ -44,9 +54,7 @@ main {
 	position: relative;
 	margin: 0 auto;
 	width: 94%;
-	height: 87%;
 	top: 3%;
-	bottom: 3%;
 	section {
 		position: relative;
 		img {
@@ -62,50 +70,22 @@ main {
 				padding-top: 45px;
 				padding-bottom: 10px;
 			}
-			.personal-page-button-on-main {
-				padding-bottom: 0.5em;
-				padding-left: 0.7em;
-				color: #0E18CF;
-				font-family: "RobotoMedium";
-			}
+		}
+		hr {
+			clear: both;
+		    height: 0;
+		    border-top: 1	px solid #C4C4C4;
+		    border-left: 1	px solid #EBEBEB;
+		    border-right: 1	px solid #EBEBEB;
+		    border-bottom: 1	px solid #EBEBEB;
 		}
 	}
 }
 
-.card {
-	overflow: hidden;
-	background-color: #fff;
-	@include box-shadow(0, 0, 10px, 0px, #000);
-	@include border-radius(3px);
-}
 
-.action-button {
-		position: absolute;
-		width: 65px;
-		height: 65px;
-		top: -31px;
-		left: 10%;
-		@include border-radius(100px);
-		@include box-shadow(0, 7px, 25px, -1px, #000);
-		background-color: #FF4C00;
-		img {
-			width: 35px;
-			@include centered;
-		}
-}
-
-#greyScreen {
-	position: fixed;
-	top: 0;
-	display: none;
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: .5;
-}
 
 aside {
-	z-index: 1;
+	z-index: 2;
 	opacity: 1;
 	position: fixed;
 	overflow: auto;
@@ -172,12 +152,21 @@ aside {
 		}
 	}
 }
-.userinfo-nav-WRAP {
+
+.swipe-for-aside {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 5%;
+	height: 93%;
+}
+
+.WRAP-content-in-aside {
 	min-height: 100%;
 	margin-bottom: -1.7em;
 }
 
-.userinfo-nav-WRAP:after {
+.WRAP-content-in-aside:after {
 	content: "";
 	display: block;
 	height: 1.7em;
@@ -202,10 +191,96 @@ aside {
 		}
 	}
 }
-.swipe-for-aside {
+
+
+
+
+#greyScreen {
 	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 5%;
-	height: 93%;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: .5;
+}
+
+.card {
+	overflow: hidden;
+	background-color: #fff;
+	margin-bottom: 1em;
+	@include box-shadow(0, 0, 10px, 0px, #000);
+	@include border-radius(3px);
+}
+
+.flat-button {
+	display: inline-block;
+	padding: 0.5em;
+	color: #006AFF;
+	font-family: "RobotoMedium";
+}
+
+.raised-button {
+	display: inline-block;
+	padding: 0.5em 1.5em;
+	font-family: "RobotoMedium";
+	color: #fff;
+	background-color: #006AFF;
+	@include box-shadow(0, 2px, 10px, 0, #888);
+	@include border-radius(2px);
+}
+
+.action-button {
+		position: absolute;
+		width: 65px;
+		height: 65px;
+		top: -31px;
+		left: 10%;
+		@include border-radius(100px);
+		@include box-shadow(0, 7px, 25px, -1px, #000);
+		background-color: #FF4C00;
+		img {
+			width: 35px;
+			@include centered;
+		}
+}
+
+.question {
+	padding: 0.7em 0.8em 1em;
+	font-family: "RobotoMedium";
+	font-size: 1.2em;
+	.back-on-question-card {
+		font-size: 0.9em;
+		float: left;
+	}
+	.start-again-on-question-card {
+		font-size: 0.9em;
+		float: right;
+	}
+}
+
+.answer {
+	padding: 1em 0.8em 1em;
+	input[type="radio"] {
+		display: none;
+	}
+	label {
+		font-size: 1.2em;
+	}
+	input[type="radio"] + label span:before {
+
+		font-family: 'Radiobox';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		padding-right: 0.7em;
+		content: "\e601";
+	}
+	input[type="radio"]:checked + label span:before {
+		content: "\e600";
+	}
+	.next-answer {
+		float: right;
+		margin: 1em;
+		margin-right: 0.8em;
+	}
 }

@@ -3,14 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>9Books</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="js/jquery.mobile.custom.min.js"></script>
-	<script src="js/scripts.js"></script>
 	<link rel="stylesheet" type="text/css" href="scss/style.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
+<div class="under-header"></div>
 <header>
 	<img class="menu-button" src="icons/ic_menu_black_24px.svg">
 	<div>9books</div>
@@ -19,16 +16,19 @@
 	<section class="card">
 		<img src="images/monro.jpg">
 		<div class="under-main-img">
-		<div class="action-button">
-		<img src="icons/ic_question_answer_black_24px.svg">
+			<a class="no-stroke" href="html/question.html">
+				<div class="action-button">
+					<img src="icons/ic_question_answer_black_24px.svg">
+				</div>
+			</a>
+			<p>Задумались, какую книгу прочесть?<br>
+			Мы Вам подскажем!</p>
+			<div class="flat-button">ЛИЧНЫЙ КАБИНЕТ</div>
 		</div>
-		<p>Задумались, какую книгу прочесть?<br>
-		Мы Вам подскажем!</p>
-		<div class="personal-page-button-on-main">ЛИЧНЫЙ КАБИНЕТ</div>
 	</section>
 </main>
 <aside>
-	<div class="userinfo-nav-WRAP">
+	<div class="WRAP-content-in-aside">
 		<div class="userInfo">
 			<img class="close-menu-icon" src="icons/ic_close_black_24px.svg">
 			<div class="photo"><img src="icons/ic_account_circle_black_24px.svg"></div>
@@ -49,12 +49,16 @@
 	</div>
 	<div class="page-on">
 		<div>
-			<a href="http://page-on.com/">Page-ON web-studio</a>
-			<img src="icons/ic_launch_black_24px.svg">
+			<a href="http://page-on.com/">Page-ON web-studio
+			<img src="icons/ic_launch_black_24px.svg"></a>
 		</div>
 	</div>
 </aside>
 <div class="swipe-for-aside"></div>
 <div id="greyScreen"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>

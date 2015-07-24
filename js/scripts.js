@@ -33,14 +33,8 @@ $(document).ready(function() {
         if (AnimationIsGoing == false) {
             slideMenu('-100%');
         }});
-// анимация после нажатия круглой кнопки
+// анимация нажатия круглой кнопки
         $('.action-button').click(function() {
             $(this).addClass('animated bounceOut');
-            setTimeout(function() {
-                $('section').addClass('animated fadeOutLeftBig');
-            }, 700);
-            });
-    // setTimeout(function() {
-    //     $('section').addClass('animated fadeOutLeftBig');
-    // },500);
+        });
 });
