@@ -34,7 +34,23 @@ $(document).ready(function() {
             slideMenu('-100%');
         }});
 // анимация нажатия круглой кнопки
-        $('.action-button').click(function() {
-            $(this).addClass('animated bounceOut');
-        });
+    $('.action-button').click(function() {
+        $(this).addClass('animated bounceOut');
+    });
+// active/inactive состояния кнопки следующего вопроса ("далее")
+    $('.answer-the-question').change(function() {
+        if( $(this).is(':checked') ) {
+            $('.next-answer').removeClass('raised-button-disabled');
+            $('.next-answer').wrap('<a href=""></a>');
+        }
+    });
+// анимация при переходе к следующему вопросу
+    $('.next-answer').click(function() {
+        if(!($('.next-answer').hasClass('raised-button-disabled'))) {
+            $(this).addClass('animated little-push');
+            setTimeout(function() {
+                $('section').addClass('animated fadeOutLeftBig');
+            }, 200);
+        }
+    });
 });

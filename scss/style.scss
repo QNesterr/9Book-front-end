@@ -230,6 +230,12 @@ aside {
 	@include border-radius(2px);
 }
 
+.raised-button-disabled {
+	color: #666;
+	background-color: #ddd;
+	@include box-shadow(0, 0, 2px, 0, #888);
+}
+
 .action-button {
 		position: absolute;
 		width: 65px;
